@@ -1,5 +1,19 @@
 <?php
+/**
+ * Jingga
+ *
+ * PHP Version 8.1
+ *
+ * @package   Modules\BankAccounting\Models\Parser
+ * @copyright Dennis Eichhorn
+ * @license   OMS License 2.0
+ * @version   1.0.0
+ * @link      https://jingga.app
+ */
 declare(strict_types=1);
+
+$payments = [];
+
 $xml = <<<PAIN_START
 <?xml version="1.0" encoding="UTF-8"?>
 <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.11" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -72,9 +86,9 @@ foreach ($payments as $payment) {
             </CdtTrfTxInf>
 PAIN_MAIN;
 
-    // consider to use <Strd> instead of <Ustrd> where possible
-    // consider to use <Invcr>
-    // how to mix international pay?
+    // @question consider to use <Strd> instead of <Ustrd> where possible
+    // @question consider to use <Invcr>
+    // @question how to mix international pay?
 }
 
 $xml .= <<<PAIN_END
