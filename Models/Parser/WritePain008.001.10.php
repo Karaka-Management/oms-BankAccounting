@@ -12,7 +12,7 @@
  */
 declare(strict_types=1);
 
-$payments = [];
+$payments = [1];
 
 $xml = <<<PAIN_START
 <?xml version="1.0" encoding="UTF-8"?>
