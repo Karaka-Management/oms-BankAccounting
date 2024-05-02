@@ -9,6 +9,9 @@
  * @license   OMS License 2.0
  * @version   1.0.0
  * @link      https://jingga.app
+ *
+ * @todo Implement pain 001 (SEPA) and 008
+ *      https://github.com/Karaka-Management/oms-BankAccounting/issues/1
  */
 declare(strict_types=1);
 
